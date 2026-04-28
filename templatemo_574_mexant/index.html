@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="AESURUS - Enterprise Security & Cloud Architecture">
+    <meta name="author" content="AESURUS">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>AESURUS | Secure. Scale. Succeed.</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <style>
+      .sleek-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px 30px;
+        height: 100%;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      }
+      .sleek-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        border-color: #ff511a;
+      }
+      .sleek-icon {
+        width: 65px;
+        height: 65px;
+        background: rgba(255, 81, 26, 0.05);
+        color: #ff511a;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+      .sleek-card h4 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #1e293b;
+      }
+      .sleek-card p {
+        color: #64748b;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      /* Auto-Scrolling Enclave Track */
+      .enclave-scroll-wrapper {
+        overflow: hidden;
+        width: 100%;
+        padding: 20px 0;
+        position: relative;
+      }
+      .enclave-track {
+        display: flex;
+        gap: 30px;
+        width: max-content;
+        animation: autoScroll 25s linear infinite;
+      }
+      .enclave-track:hover {
+        animation-play-state: paused; /* Pauses when the user hovers to read */
+      }
+      @keyframes autoScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50% - 15px)); }
+      }
+      .enclave-track > div {
+        width: 350px; /* Fixed width so they stay uniform while scrolling */
+        flex-shrink: 0;
+      }
+      
+      /* Premium Dark Mode Enclave Section */
+      .enclave-premium {
+        background: #0f172a;
+        padding: 100px 0;
+        margin: 60px 0;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      .enclave-premium::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at top right, rgba(255, 81, 26, 0.1), transparent 50%);
+        pointer-events: none;
+      }
+      .enclave-premium h2, .enclave-premium h4 { color: #ffffff; }
+      .enclave-premium p { color: #94a3b8; }
+      .enclave-premium .sleek-card {
+        background: #1e293b;
+        border-color: #334155;
+      }
+      .enclave-premium .sleek-card:hover {
+        border-color: #ff511a;
+        background: #0f172a;
+      }
+      .enclave-kicker {
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgba(255, 81, 26, 0.1);
+        border: 1px solid rgba(255, 81, 26, 0.3);
+        color: #ff511a;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+<body>
+
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo-blue.png" alt="AESURUS Logo" class="header-logo">
+                      </a>
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="#services">Services</a></li>
+                          <li class="scroll-to-section"><a href="#about">About</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Capabilities</a>
+                              <ul class="sub-menu">
+                                  <li><a href="about-us.html">Our Leadership</a></li>
+                                  <li><a href="our-services.html">The Enclave</a></li>
+                                  <li><a href="contact-us.html">Initiate Protocol</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="contact-us.html">Command Center</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <div class="swiper-container" id="top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-inner" style="background-image:url(assets/images/slide-01.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="header-text">
+                  <h2>Architecting <em>Digital</em><br>Fortresses That <em>Endure</em></h2>
+                  <div class="div-dec"></div>
+                  <p>Delivering sovereign data storage, elite threat protection, and seamless business continuity. We fortify your enterprise against the unpredictable.</p>
+                  <div class="buttons">
+                    <div class="green-button">
+                      <a href="#services">Explore Services</a>
+                    </div>
+                    <div class="orange-button">
+                      <a href="contact-us.html">Book Consultation</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-inner" style="background-image:url(assets/images/slide-02.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="header-text">
+                  <h2>Absolute <em>Sovereignty</em> <br>with The <em>Enclave</em></h2>
+                  <div class="div-dec"></div>
+                  <p>Military-grade isolation for your most critical data assets. Our air-gapped vaults and zero-trust framework ensure complete protection against advanced persistent threats and ransomware.</p>
+                  <div class="buttons">
+                    <div class="green-button">
+                      <a href="our-services.html">Learn About Enclave</a>
+                    </div>
+                    <div class="orange-button">
+                      <a href="contact-us.html">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-inner" style="background-image:url(assets/images/slide-03.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="header-text">
+                  <h2>Uncompromising <em>Cloud</em><br>& Business <em>Continuity</em></h2>
+                  <div class="div-dec"></div>
+                  <p>Seamless, scalable enterprise environments engineered across top-tier platforms like Azure and OCI. Lightning-fast failover systems keep your operations online 24/7.</p>
+                  <div class="buttons">
+                    <div class="green-button">
+                      <a href="#about">Our Technologies</a>
+                    </div>
+                    <div class="orange-button">
+                      <a href="contact-us.html">Deploy Today</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  <section class="services" id="services">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <h2 style="font-size: 32px; font-weight: 800; color: #1e293b; margin-bottom: 15px;">Enterprise Solutions</h2>
+          <p style="color: #64748b; font-size: 16px;">We design, deploy, and defend enterprise-grade cloud architecture.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-item">
+            <i class="fas fa-crosshairs"></i>
+            <h4>Managed Detection (MDR)</h4>
+            <p>24/7 continuous monitoring by elite threat hunters who actively detect and respond to advanced cyber threats before they spread.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item">
+            <i class="fas fa-cloud"></i>
+            <h4>Multi-Cloud Architecture</h4>
+            <p>Enterprise cloud migration and deployment utilizing AWS, Azure, and Oracle Cloud Infrastructure (OCI) with zero operational downtime.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item">
+            <i class="fas fa-laptop-code"></i>
+            <h4>Endpoint Protection</h4>
+            <p>Advanced malware detection and ransomware mitigation securing your hardware fleet globally via industry-leading Sophos EDR.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item">
+            <i class="fas fa-file-contract"></i>
+            <h4>JDPA Compliance Audits</h4>
+            <p>End-to-end technical consulting and penetration testing to align your infrastructure with the Jamaica Data Protection Act.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="enclave-premium">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-7">
+          <span class="enclave-kicker">Our Flagship Service</span>
+          <h2 style="font-size: 42px; font-weight: 800; margin-bottom: 20px;">Standard Cloud Security is Failing.</h2>
+          <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+            Targeted ransomware attacks and foreign data subpoenas are bypassing traditional firewalls. If your enterprise handles classified, financial, or legally restricted data, you need an infrastructure built for survival. 
+          </p>
+          <p style="font-size: 18px; line-height: 1.8; color: #fff; font-weight: 500;">
+            Introducing <strong style="color: #ff511a;">The Enclave Protocol</strong>: Absolute digital sovereignty and military-grade network isolation.
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-end mt-4 mt-lg-0">
+           <a href="our-services.html#enclave-deep-dive" class="btn" style="background: transparent; border: 1px solid #ff511a; color: #ff511a; padding: 15px 30px; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: inline-block;">Explore Architecture</a>
+           <br>
+           <a href="contact-us.html" class="btn" style="background: #ff511a; color: #fff; padding: 15px 30px; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: inline-block;">Request Enclave Deployment</a>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-lg-4">
+          <div class="sleek-card">
+            <div class="sleek-icon" style="background: rgba(255,255,255,0.05);"><i class="fas fa-network-wired"></i></div>
+            <h4>Air-Gapped Isolation</h4>
+            <p>We disconnect your most sensitive data from unsecured public networks, rendering external ransomware injection physically impossible.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="sleek-card">
+            <div class="sleek-icon" style="background: rgba(255,255,255,0.05);"><i class="fas fa-globe-americas"></i></div>
+            <h4>Absolute Sovereignty</h4>
+            <p>Your data stays strictly within your operational jurisdiction. You are immune to foreign government scraping and data subpoenas.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="sleek-card">
+            <div class="sleek-icon" style="background: rgba(255,255,255,0.05);"><i class="fas fa-user-lock"></i></div>
+            <h4>Zero-Trust Protocol</h4>
+            <p>Never trust, always verify. We implement rigorous micro-segmentation so even if a device is breached, lateral movement is blocked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-us" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Who We Are</h6>
+            <h4>Engineering Resilience</h4>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>Cyber Defense</span></div>
+                    <div class="gradient-border"><span>Cloud Solutions</span></div>
+                    <div class="gradient-border"><span>Compliance</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="main-list">
+                          <span class="title">Service Focus</span>
+                          <span class="title">Technology</span>
+                          <span class="title">Availability</span>
+                          <span class="title">Status</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Active Threat Hunting</span>
+                          <span class="item">Sophos MDR</span>
+                          <span class="item">24/7/365</span>
+                          <span class="item">Active</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Zero-Trust Framework</span>
+                          <span class="item">Custom/Enclave</span>
+                          <span class="item">Always-On</span>
+                          <span class="item">Active</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Endpoint Sec (EDR)</span>
+                          <span class="item">Next-Gen Antivirus</span>
+                          <span class="item">Global</span>
+                          <span class="item">Active</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <span class="title">Cloud Service</span>
+                          <span class="title">Partner Tech</span>
+                          <span class="title">Deployment</span>
+                          <span class="title">Sovereignty</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Enterprise Migration</span>
+                          <span class="item">Azure / AWS</span>
+                          <span class="item">Zero-Downtime</span>
+                          <span class="item">Global</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Disaster Recovery</span>
+                          <span class="item">Veeam</span>
+                          <span class="item">Automated</span>
+                          <span class="item">Geofenced</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Database Arch</span>
+                          <span class="item">Oracle (OCI)</span>
+                          <span class="item">High-Availability</span>
+                          <span class="item">Localized</span>
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <span class="title">Assessment Area</span>
+                          <span class="title">Framework</span>
+                          <span class="title">Audit Frequency</span>
+                          <span class="title">Certification</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Data Privacy</span>
+                          <span class="item">JDPA Alignment</span>
+                          <span class="item">Annual / Continual</span>
+                          <span class="item">Compliant</span>
+                        </div>
+                        <div class="list-item">
+                          <span class="item item-title">Network Penetration</span>
+                          <span class="item">Ethical Hacking</span>
+                          <span class="item">Quarterly</span>
+                          <span class="item">Verified</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="right-content">
+            <h4>Founded by Industry Leaders</h4>
+            <p>Led by Executive Director Brian Grant and COO Donali Grant, AESURUS is built on deep technical mastery. We don't just sell software; we architect custom solutions that guarantee your operational survival during critical events.</p>
+            <div class="green-button">
+              <a href="about-us.html">Meet the Leadership</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="left-image">
+            <img src="assets/images/calculator-image.png" alt="Security Infrastructure">
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="section-heading">
+            <h6>Your Security Posture</h6>
+            <h4>Request an IT Audit</h4>
+          </div>
+          <form id="calculate" action="https://formspree.io/f/myklrwzj" method="POST">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="name">Lead Contact</label>
+                  <input type="name" name="name" id="name" placeholder="" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="email">Corporate Email</label>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="subject">Company Name</label>
+                  <input type="subject" name="subject" id="subject" placeholder="" autocomplete="on" >
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="chooseOption" class="form-label">Primary Interest</label>
+                  <select name="Category" class="form-select" aria-label="Default select example" id="chooseOption">
+                      <option selected>Choose an Option</option>
+                      <option value="The Enclave Service">The Enclave Service</option>
+                      <option value="Cloud Migration Strategy">Cloud Migration Strategy</option>
+                      <option value="JDPA Compliance Audit">JDPA Compliance Audit</option>
+                      <option value="Managed Threat Detection">Managed Threat Detection</option>
+                  </select>
+              </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="orange-button">Submit Request</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2026 AESURUS. Secure. Scale. Succeed. All Rights Reserved. 
+          <br>Enterprise Cybersecurity & Cloud Architecture</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        var interleaveOffset = 0.5;
+        var swiperOptions = {
+        loop: true, speed: 1000, grabCursor: true, watchSlidesProgress: true,
+        mousewheelControl: true, keyboardControl: true,
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        autoplay: {
+            delay: 4000, /* 4000 milliseconds = 4 seconds per slide */
+            disableOnInteraction: false, /* Keeps auto-scrolling even after the user clicks */
+        },
+        on: {
+          progress: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              var slideProgress = swiper.slides[i].progress;
+              var innerOffset = swiper.width * interleaveOffset;
+              var innerTranslate = slideProgress * innerOffset;
+              swiper.slides[i].querySelector(".slide-inner").style.transform =
+                "translate3d(" + innerTranslate + "px, 0, 0)";
+            }      
+          },
+          touchStart: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = "";
+            }
+          },
+          setTransition: function(speed) {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].querySelector(".slide-inner").style.transition = speed + "ms";
+            }
+          }
+        }
+      };
+      var swiper = new Swiper(".swiper-container", swiperOptions);
+    </script>
+  </body>
+</html>
