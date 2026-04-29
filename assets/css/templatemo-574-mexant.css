@@ -756,6 +756,25 @@ banner
   top: 50%;
   transform: translateY(-50%);
 }
+/* Fix for Logo/Images placed inside the Hero Slider */
+.slide-inner .header-text img {
+  max-width: 400px; /* This stops the logo from blowing up. Adjust this number to make it bigger or smaller! */
+  width: 100%; 
+  height: auto;
+  display: block;
+  margin-bottom: 30px; /* Adds breathing room between the logo and the text/buttons below it */
+  border-radius: 12px; /* Smooths the sharp corners of your .jpg */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Optional: Gives the logo a cool floating shadow */
+}
+
+/* Mobile fix for the slider logo */
+@media (max-width: 767px) {
+  .slide-inner .header-text img {
+    max-width: 250px; /* Shrinks the logo so it fits perfectly on phone screens */
+    margin-left: auto;
+    margin-right: auto; /* Centers it on mobile */
+  }
+}
 
 .slide-inner .header-text h2 {
   position: relative;
@@ -792,21 +811,20 @@ banner
   font-style: normal;
   color: #ff4500; 
 }
-
 .slide-inner .header-text .buttons {
-  display: inline;
+  display: flex;
+  gap: 20px; /* Creates perfect, even spacing between the buttons */
   opacity: 1;
   visibility: visible;
+  margin-top: 30px; /* Adds breathing room below your text/logo */
 }
 
-.slide-inner .header-text .buttons .green-button {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  color: #fff !important;
+.slide-inner .header-text .buttons .green-button,
+.slide-inner .header-text .buttons .orange-button {
+  margin: 0; /* Clears out the old messy margins */
+  float: none; /* Kills the float that was breaking the layout */
+  padding-left: 20px;
+  padding-right: 30px;
 }
 
 /*
@@ -1640,6 +1658,11 @@ responsive
 --------------------------------------------- 
 */
 
+/* ---------------------------------------------
+responsive
+--------------------------------------------- 
+*/
+
 body {
   overflow-x: hidden;
 }
@@ -1655,7 +1678,11 @@ body {
     background-color: #0a0a0a;
   }
   .slide-inner .header-text {
-    width: 80%;
+    width: 90%;
+  }
+  .slide-inner .header-text h2 {
+    font-size: 48px; /* Scaled down for tablet */
+    line-height: 60px;
   }
   .simple-cta {
     text-align: center;
@@ -1666,8 +1693,8 @@ body {
   section.about-us .naccs .menu div,
   section.service-details .naccs .menu div {
     margin-right: 15px;
-    font-size: 18px; /* Slightly smaller for tablets */
-    padding: 15px 20px;
+    font-size: 16px; 
+    padding: 12px 15px;
   }
   section.about-us .right-content {
     margin-left: 0px;
@@ -1711,7 +1738,7 @@ body {
     border-radius: 15px;
   }
   section.service-details ul.nacc li .right-content {
-    padding: 50px;
+    padding: 30px;
     margin-left: 0px;
   }
   section.service-details ul.nacc li .right-content h4 {
@@ -1729,54 +1756,50 @@ body {
 }
 
 @media (max-width: 767px) {
-  .header-area .main-nav .logo {
-    line-height: 100px;
-    font-size: 28px; /* Safe size for mobile headers */
-  }
-  .background-header .main-nav .logo {
-    line-height: 80px;
-  }
-  .header-area .main-nav .nav li.has-sub ul.sub-menu {
-    display: none;
-  }
-  .slide-inner .header-text p {
-    display: none;
-  }
-  .slide-inner .header-text {
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .slide-inner .header-text .div-dec {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .slide-inner .header-text .buttons {
-    display: inline-flex;
-  }
-  .slide-inner .header-text .buttons .green-button {
-    float: none;
-  }
-  .services .service-item i {
-    margin-bottom: 35px;
-  }
-  section.about-us ul.nacc li span.item-title {
-    font-size: 18px !important; /* Scaled up for mobile */
-  }
-  section.about-us ul.nacc li span.item {
-    font-size: 16px; /* Scaled up for mobile */
-  }
-  .testimonials .item i {
-    margin-bottom: 60px;
-  }
-  .testimonials .item img {
-    max-width: 100px;
-    right: 50px;
-    top: 35px;
-    transform: translateY(0);
-  }
-  .testimonials .item {
-    padding: 50px;
-  }
+  /* GLOBAL MOBILE FONT REDUCTIONS */
+  p { font-size: 16px !important; line-height: 26px !important; }
+  h4 { font-size: 26px !important; line-height: 36px !important; }
+  .section-heading h4 { font-size: 32px !important; line-height: 42px !important; }
+  .page-heading h2 { font-size: 42px !important; }
+  
+  /* HEADER & NAV */
+  .header-logo { max-height: 45px !important; margin-top: 18px !important; }
+  .header-area .main-nav .logo { line-height: 80px; font-size: 24px; }
+  .background-header .main-nav .logo { line-height: 80px; }
+  .header-area { background-color: #f7f7f7; padding: 0px 15px; height: 80px; text-align: left; }
+  .header-area .menu-trigger { display: block !important; top: 20px; }
+  .header-area .main-nav .nav li.has-sub ul.sub-menu { display: none; }
+  .header-area.header-sticky .nav { margin-top: 80px !important; }
+  .header-area .main-nav .nav li a { font-size: 18px !important; height: 50px !important; line-height: 50px !important; }
+  
+  /* HERO BANNER FIXES */
+  .slide-inner .header-text { text-align: center; width: 100%; margin-left: 0; padding: 0 20px; }
+  .slide-inner .header-text h2 { font-size: 38px !important; line-height: 50px !important; margin-bottom: 20px; }
+  .slide-inner .header-text p { display: block !important; margin-right: 0; margin-bottom: 25px; }
+  .slide-inner .header-text .div-dec { margin-left: auto; margin-right: auto; }
+  
+  /* MOBILE BUTTONS */
+  .slide-inner .header-text .buttons { display: flex; flex-direction: column; gap: 15px; width: 100%; }
+  .slide-inner .header-text .buttons .green-button { margin-right: 0; float: none; }
+  .green-button a, .orange-button a, #calculate button.orange-button { font-size: 16px !important; padding: 14px 20px !important; width: 100%; text-align: center; display: block; }
+  
+  /* SERVICES & CONTENT GRIDS */
+  .services .service-item { padding: 30px 20px; text-align: center; }
+  .services .service-item i { float: none; display: inline-block; margin-right: 0; margin-bottom: 20px; font-size: 50px; }
+  .services .service-item h4 { font-size: 22px !important; }
+  
+  .main-services .right-text-content h4, .main-services .left-text-content h4 { font-size: 26px !important; margin-top: 20px; }
+  .main-services .right-text-content i, .main-services .left-text-content i { width: 80px; height: 80px; line-height: 80px; font-size: 40px; margin-bottom: 15px; }
+  
+  /* ACCORDIONS & TABS */
+  .accordion-head { font-size: 20px !important; }
+  section.about-us .naccs .menu div { display: block; width: 100%; margin-right: 0; margin-bottom: 10px; font-size: 16px; padding: 12px; }
+  section.about-us ul.nacc li span.title, section.about-us ul.nacc li span.item { font-size: 14px !important; width: 48%; display: inline-block; margin-bottom: 10px; }
+  
+  /* TESTIMONIALS & FORMS */
+  .testimonials .item { padding: 30px 20px !important; text-align: center; }
+  .testimonials .item i { margin-bottom: 20px; }
+  .testimonials .item img { position: relative; max-width: 120px; right: auto; top: auto; transform: none; margin-top: 20px; }
+  
+  #contact input, #contact textarea, #calculate input, #calculate select { font-size: 16px !important; height: auto !important; padding: 15px !important; }
 }
